@@ -1,0 +1,52 @@
+#!/bin/bash
+
+##### Aliases #####
+alias g=git
+alias ls='ls -G'
+alias errcho='>&2 echo'
+alias reload='source ${HOME}/.profile'
+alias dm=docker-machine
+alias dc=docker-compose
+alias delpyc='find . -iname "*.pyc" -delete'
+alias delorig='find . -iname "*.orig" -delete'
+alias custom_commands='grep -e ".*() {" ~/bin/* | cut -d ":" -f2 | cut -d "("  -f1'
+# This alias has to be defined before all the scripts in bin are loaded.
+
+# # These variables are used in other scripts, we have to make them known in the system.
+export VMS=`dm ls | cut -d ' ' -f 1 | tail -n +2`
+export WD=${HOME}/projects
+export PROJECTS=`ls -d ${WD}/*`
+
+for project in ${PROJECTS}
+do
+    alias `echo ${project} | rev | cut -d "/" -f1 | rev`="cd ${WD}/${project}"
+done
+
+##### The lazy programmer bash functions #####
+# Include own scripts on the path
+for f in ${HOME}/bin/*.sh; do
+   . ${f}
+done
+
+
+# No duplicated lines on bash_history
+export HISTCONTROL=ignoredups
+
+##### GIT autocompletion #####
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+##### Virtualenv wrapper #####
+source /usr/local/bin/virtualenvwrapper.sh
+
+
+##### Start the docker machines #####
+for vm in ${VMS}
+do
+    eval $(docker-machine env ${vm})
+done
+
+[[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm" && gvm use go1.6 > /dev/null
+export GO15VENDOREXPERIMENT=0
+export GOPATH=${WD}/go
