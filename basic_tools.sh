@@ -12,7 +12,7 @@ brew cask install docker google-chrome
 # install easy_install and pip
 echo "#### Installing pip ####"
 echo
-curl https://bootstrap.pypa.io/ez_setup.py -o - | python
+curl https://bootstrap.pypa.io/ez_setup.py -o - | sudo python
 sudo easy_install pip
 
 # install virtualenv and virtualenvwrapper
