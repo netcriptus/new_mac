@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPO_URL=https://raw.githubusercontent.com/netcriptus/new_mac/master
-CUSTOM_SCRIPTS='shortcuts deploy vm_manager'
+CUSTOM_SCRIPTS='shortcuts'
 
 install () {
   curl ${REPO_URL}/${1}.sh | bash
@@ -21,6 +21,9 @@ install basic_tools
 for script in ${CUSTOM_SCRIPTS}; do
   curl ${REPO_URL}/${script}.sh -o ${HOME}/bin/${script}.sh
 done
+
+# Copy gitconfig
+curl ${REPO_URL}/base_profile > ${HOME}/.gitconfig
 
 # Copy base .profile
 curl ${REPO_URL}/base_profile > ${HOME}/.profile

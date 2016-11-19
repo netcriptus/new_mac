@@ -1,0 +1,8 @@
+[user]
+	name = Fernando Cezar
+	email = fernando@cezar.link
+[alias]
+	st = status
+	br = branch -a
+	ci = commit -m
+	co = checkout

@@ -9,6 +9,5 @@ success() {
 }
 
 substring() {
-    occurences=${2//[^${1}]}
-    [ ${#occurences} -gt 0 ]
+    [ "${1}" =~ "${2}" ]
 }
