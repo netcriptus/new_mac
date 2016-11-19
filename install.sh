@@ -12,7 +12,7 @@ install () {
 # Create folder for custom scripts.
 mkdir -p ${HOME}/bin
 
-#Create projects folder
+# Create projects folder
 mkdir -p ${HOME}/projects
 
 install basic_tools
@@ -23,7 +23,7 @@ for script in ${CUSTOM_SCRIPTS}; do
 done
 
 # Copy gitconfig
-curl ${REPO_URL}/base_profile > ${HOME}/.gitconfig
+curl ${REPO_URL}/base_gitconfig > ${HOME}/.gitconfig
 
 # Copy base .profile
 curl ${REPO_URL}/base_profile > ${HOME}/.profile

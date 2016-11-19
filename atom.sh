@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "#### Installing Atom ####"
+echo
 brew cask install atom
 
 GO_PKGS='formatter-gofmt autocomplete-go go-get gofmt gometalinter-linter navigator-godef'
