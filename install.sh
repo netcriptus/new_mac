@@ -19,7 +19,7 @@ install basic_tools
 
 # Copy custom scripts
 for script in ${CUSTOM_SCRIPTS}; do
-  curl ${REPO_URL}/${script}.sh -o ${HOME}/bin/${script}.sh
+  curl ${REPO_URL}/custom_commands/${script}.sh -o ${HOME}/bin/${script}.sh
 done
 
 # Copy gitconfig
