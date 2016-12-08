@@ -5,15 +5,11 @@ echo "#### Installing Homebrew ####"
 echo
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew tap caskroom/cask
-brew install ack git bash-completion coreutils keybase wget
-brew cask install docker google-chrome
-
-# install easy_install and pip
-echo "#### Installing pip ####"
+echo "#### Installing basic tools from homebrew ####"
 echo
-curl https://bootstrap.pypa.io/ez_setup.py -o - | sudo python
-sudo easy_install pip
+brew tap caskroom/cask
+brew install ack git bash-completion coreutils keybase wget python3
+brew cask install docker google-chrome iterm2
 
 # install virtualenv and virtualenvwrapper
 sudo pip install virtualenv virtualenvwrapper

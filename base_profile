@@ -3,7 +3,7 @@
 ##### Aliases #####
 alias g=git
 alias ls='ls -G'
-alias errcho='>&2 echo'
+alias errcho='>&2 echo'  # echo to stderr
 alias reload='source ${HOME}/.profile'
 alias dm=docker-machine
 alias delpyc='find . -iname "*.pyc" -delete && find . -iname "__pycache__" -delete'
