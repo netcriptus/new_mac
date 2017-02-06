@@ -6,3 +6,5 @@
 	br = branch -a
 	ci = commit -m
 	co = checkout
+	new = branch
+	del = branch -D
