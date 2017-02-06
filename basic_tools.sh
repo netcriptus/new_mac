@@ -11,7 +11,12 @@ brew tap caskroom/cask
 brew install ack git bash-completion coreutils keybase wget python3
 brew cask install docker google-chrome iterm2
 
+#Install RVM
+echo "#### Installing RVM ####"
+curl -sSL https://get.rvm.io | bash -s stable
+
 # install virtualenv and virtualenvwrapper
+echo "#### Installing virtualenvwrapper ####"
 sudo pip install virtualenv virtualenvwrapper
 
 # Install Go 1.6
