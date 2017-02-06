@@ -7,6 +7,10 @@ install () {
   curl ${REPO_URL}/${1}.sh | bash
 }
 
+rcopy () {
+  curl ${REPO_URL}/${1} > ${HOME}/${2}
+}
+
 [[ -z ${EDITOR} ]] && EDITOR='atom'
 
 # Create folder for custom scripts.
@@ -23,10 +27,10 @@ for script in ${CUSTOM_SCRIPTS}; do
 done
 
 # Copy gitconfig
-curl ${REPO_URL}/base_gitconfig > ${HOME}/.gitconfig
+rcopy base_gitconfig .gitconfig
 
 # Copy base .profile
-curl ${REPO_URL}/base_profile > ${HOME}/.profile
+rcopy base_profile .profile
 source ${HOME}/.profile
 
 # Ensure go folder exists
