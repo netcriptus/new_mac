@@ -6,5 +6,5 @@
 	br = branch -a
 	ci = commit -m
 	co = checkout
-	new = branch
+	new = "!f() { git branch ${1} && git checkout ${1}; }; f"
 	del = branch -D
