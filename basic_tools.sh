@@ -22,11 +22,11 @@ curl -sSL https://get.rvm.io | bash -s stable
 
 # install virtualenv and virtualenvwrapper
 echo "#### Installing virtualenvwrapper ####"
-sudo pip3 install virtualenv virtualenvwrapper isort
+sudo pip3 install virtualenv virtualenvwrapper isort ipython
 
 # Install Go 1.6
 echo "#### Installing GVM and golang ####"
 echo
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) &&\
-gvm install go1.4 && gvm use go1.4 &&\
+gvm install go1.4 && gvm use go1.4 &&\  # go1.6 depends on go1.4
 gvm install go1.6 && gvm use go1.6
