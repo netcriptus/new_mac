@@ -29,6 +29,9 @@ done
 # Copy gitconfig
 rcopy base_gitconfig .gitconfig
 
+# Copy terminal settings
+rcopy com.googlecode.iterm2.plist Library/Preferences/com.googlecode.iterm2.plist
+
 # Copy base .profile
 rcopy base_profile .profile
 source ${HOME}/.profile
