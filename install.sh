@@ -8,7 +8,7 @@ install () {
 }
 
 rcopy () {
-  curl ${REPO_URL}/${1} > ${HOME}/${2}
+  curl ${REPO_URL}/config_files/${1} > ${HOME}/${2}
 }
 
 [[ -z ${EDITOR} ]] && EDITOR='atom'
