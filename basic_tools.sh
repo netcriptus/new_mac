@@ -14,8 +14,8 @@ brew cask install docker google-chrome iterm2
 
 echo "#### Installing python 3 ####"
 echo
-pyenv install 3.6
-pyenv global 3.6
+pyenv install 3.6.2
+pyenv global 3.6.2
 
 #Install RVM
 echo "#### Installing RVM ####"
