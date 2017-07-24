@@ -8,21 +8,18 @@ echo
 echo "#### Installing basic tools from homebrew ####"
 echo
 brew tap caskroom/cask
-brew install ack git bash-completion coreutils keybase wget pyenv axel
+brew install ack git bash-completion coreutils keybase wget\
+     pyenv pyenv-virtualenv pyenv-virtualenvwrapper axel
 brew cask install docker google-chrome iterm2
 
 echo "#### Installing python 3 ####"
 echo
-pyenv install 3.6.1
-pyenv global 3.6.1
+pyenv install 3.6
+pyenv global 3.6
 
 #Install RVM
 echo "#### Installing RVM ####"
 curl -sSL https://get.rvm.io | bash -s stable
-
-# install virtualenv and virtualenvwrapper
-echo "#### Installing virtualenvwrapper ####"
-sudo pip3 install virtualenv virtualenvwrapper isort ipython
 
 # Install Go 1.6
 echo "#### Installing GVM and golang ####"
