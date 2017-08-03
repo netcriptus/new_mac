@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/usr/bin/env bash
 
 empty() {
     [ -z ${1} ]
