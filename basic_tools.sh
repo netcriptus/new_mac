@@ -10,7 +10,7 @@ echo
 brew tap caskroom/cask
 brew install ack git bash-completion coreutils wget\
      pyenv pyenv-virtualenv pyenv-virtualenvwrapper axel
-brew cask install docker google-chrome iterm2 keybase
+brew cask install docker google-chrome iterm2 keybase slack
 
 echo "#### Installing python 3 ####"
 echo
@@ -20,10 +20,3 @@ pyenv global 3.6.2
 #Install RVM
 echo "#### Installing RVM ####"
 curl -sSL https://get.rvm.io | bash -s stable
-
-# Install Go 1.6
-echo "#### Installing GVM and golang ####"
-echo
-bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) &&\
-gvm install go1.4 && gvm use go1.4 &&\  # go1.6 depends on go1.4
-gvm install go1.6 && gvm use go1.6
