@@ -36,7 +36,4 @@ rcopy com.googlecode.iterm2.plist Library/Preferences/com.googlecode.iterm2.plis
 rcopy base_profile .profile
 source ${HOME}/.profile
 
-# Ensure go folder exists
-mkdir -p ${WD}/go
-
 install ${EDITOR}

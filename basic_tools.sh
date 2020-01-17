@@ -9,13 +9,13 @@ echo "#### Installing basic tools from homebrew ####"
 echo
 brew tap caskroom/cask
 brew install ack git bash-completion coreutils wget\
-     pyenv pyenv-virtualenv pyenv-virtualenvwrapper axel
+     pyenv axel
 brew cask install docker google-chrome iterm2 keybase slack
 
 echo "#### Installing python 3 ####"
 echo
-pyenv install 3.6.2
-pyenv global 3.6.2
+pyenv install 3.8.0
+pyenv global 3.8.0
 
 #Install RVM
 echo "#### Installing RVM ####"

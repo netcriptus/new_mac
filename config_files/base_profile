@@ -12,6 +12,7 @@ alias dc=docker-compose
 alias delpyc='find . -iname "*.pyc" -delete && find . -iname "__pycache__" -delete'
 alias delorig='find . -iname "*.orig" -delete'
 alias custom_commands='grep -e ".*() {" ~/bin/* | cut -d ":" -f2 | cut -d "("  -f1'
+alias ports='lsof -i -n -P | grep TCP'
 
 # These variables are used in other scripts, so they have to be exported.
 export WD=${HOME}/projects
