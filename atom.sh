@@ -4,9 +4,10 @@ echo "#### Installing Atom ####"
 echo
 brew cask install atom
 
-GO_PKGS='gofmt gometalinter-linter navigator-godef'
-PYTHON_PKGS='autocomplete-python linter linter-pep8 python-indent python-isort python-tools'
+ATOM_HELPERS='atom-beautify atom-ide-ui atom-spotified busy-signal git-blame highlight-selected language-docker intentions'
+PYTHON_PKGS='autocomplete-python linter linter linter-flake8 goto-definition hyperclick python-indent python-isort python-tools'
 RUBY_PKGS='cucumber'
-MISC_PKGS='atom-spotify2 language-docker git-blame sort-lines busy-signal intentions'
+ELIXIR_PKGS='language-elixir elixir-block ide-elixir'
+MISC_PKGS='sort-lines busy-signal intentions project-sidebar teletype'
 
-which apm >&- && apm install ${GO_PKGS} ${PYTHON_PKGS} ${RUBY_PKGS} ${MISC_PKGS}
+which apm >&- && apm install ${ATOM_HELPERS} ${PYTHON_PKGS} ${RUBY_PKGS} ${ELIXIR_PKGS} ${MISC_PKGS}
