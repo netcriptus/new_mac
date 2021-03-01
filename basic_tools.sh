@@ -3,7 +3,7 @@
 # install homebrew
 echo "#### Installing Homebrew ####"
 echo
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "#### Installing basic tools from homebrew ####"
 echo
