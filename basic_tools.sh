@@ -7,7 +7,7 @@ echo
 
 echo "#### Installing basic tools from homebrew ####"
 echo
-brew tap caskroom/cask
+brew tap homebrew/cask
 brew install ack git bash-completion coreutils wget killswitch pyenv axel\
      docker-completion docker-compose-completion stats docker google-chrome\
      iterm2 keybase slack phoenix
