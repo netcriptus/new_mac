@@ -2,7 +2,7 @@
 
 echo "#### Installing Atom ####"
 echo
-brew cask install atom
+brew install atom
 
 ATOM_HELPERS='atom-beautify atom-ide-ui atom-spotified busy-signal git-blame highlight-selected language-docker intentions'
 PYTHON_PKGS='autocomplete-python linter linter linter-flake8 goto-definition hyperclick python-indent python-isort python-tools'
