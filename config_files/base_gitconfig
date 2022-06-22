@@ -1,10 +1,13 @@
 [user]
-	name = Fernando Cezar
+	name = Fernando Bernardelli
 	email = fernando@cezar.link
 [alias]
 	st = status
 	br = branch -a
 	ci = commit -m
 	co = checkout
+	ca = commit --amend --no-edit
 	new = "!f() { git branch ${1} && git checkout ${1}; }; f"
 	del = branch -D
+[merge]
+	tool = opendiff
