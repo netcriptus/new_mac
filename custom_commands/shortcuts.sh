@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 empty() {
-    [ -z ${1} ]
+    [ -z "${1}" ]
 }
 
 success() {
@@ -9,5 +9,5 @@ success() {
 }
 
 substring() {
-    [[ "${2}" =~ "${1}" ]]
+    [[ "${2}" =~ ${1} ]]
 }
