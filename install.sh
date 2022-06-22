@@ -11,8 +11,6 @@ rcopy () {
   curl ${REPO_URL}/config_files/${1} > ${HOME}/${2}
 }
 
-[[ -z ${EDITOR} ]] && EDITOR='atom'
-
 # Create folder for custom scripts.
 mkdir -p ${HOME}/bin
 
@@ -35,5 +33,3 @@ rcopy com.googlecode.iterm2.plist Library/Preferences/com.googlecode.iterm2.plis
 # Copy base .profile
 rcopy base_profile .profile
 source ${HOME}/.profile
-
-install ${EDITOR}
